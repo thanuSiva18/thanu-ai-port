@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ArrowDown, Sparkles, Code2, Database, Brain } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, Sparkles, FileText, Award, GraduationCap, Trophy } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -25,6 +25,39 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-primary/10">
+        <div className="max-w-6xl mx-auto px-6 py-4">
+          <ul className="flex items-center justify-center gap-8 text-sm font-medium">
+            <li>
+              <button onClick={() => scrollToSection('hero')} className="text-foreground/70 hover:text-primary transition-colors">
+                Home
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('projects')} className="text-foreground/70 hover:text-primary transition-colors">
+                Projects
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('skills')} className="text-foreground/70 hover:text-primary transition-colors">
+                Skills
+              </button>
+            </li>
+            <li>
+              <button onClick={() => window.open('#', '_blank')} className="text-foreground/70 hover:text-primary transition-colors">
+                Resume
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('contact')} className="text-foreground/70 hover:text-primary transition-colors">
+                Contact
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
       {/* Animated grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a2e_1px,transparent_1px),linear-gradient(to_bottom,#1a1a2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)] opacity-20" />
       
@@ -58,8 +91,8 @@ const Hero = () => {
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight">
               Hi, I'm{" "}
-              <span className="text-gradient block mt-2">
-                Thanu Siva N
+              <span className="bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent block mt-2">
+                Thanu Siva
               </span>
             </h1>
             
@@ -67,20 +100,14 @@ const Hero = () => {
               <p className="text-xl md:text-2xl font-medium text-foreground/90">
                 Aspiring Data Scientist
               </p>
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-sm font-medium text-primary">
-                <span className="flex items-center gap-1">
-                  <Code2 className="w-4 h-4" /> Python
-                </span>
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start text-base font-medium text-primary">
+                <span>🐍 Python</span>
                 <span>•</span>
-                <span className="flex items-center gap-1">
-                  <Database className="w-4 h-4" /> SQL
-                </span>
+                <span>🧮 SQL</span>
                 <span>•</span>
-                <span>Power BI</span>
+                <span>📊 Power BI</span>
                 <span>•</span>
-                <span className="flex items-center gap-1">
-                  <Brain className="w-4 h-4" /> AI/ML
-                </span>
+                <span>🤖 AI/ML</span>
               </div>
             </div>
             
@@ -111,6 +138,15 @@ const Hero = () => {
               >
                 <Linkedin className="w-5 h-5 mr-2 group-hover:text-primary transition-colors" />
                 Connect on LinkedIn
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="glass-card border-primary/30 hover:border-primary/60 transition-all duration-300 hover:scale-105 group"
+                onClick={() => window.open('#', '_blank')}
+              >
+                <FileText className="w-5 h-5 mr-2 group-hover:text-primary transition-colors" />
+                View Resume
               </Button>
             </div>
             
@@ -157,18 +193,26 @@ const Hero = () => {
                 </div>
                 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="text-center p-4 rounded-xl bg-primary/5 border border-primary/10">
-                    <div className="text-2xl font-bold text-primary">3+</div>
-                    <div className="text-xs text-muted-foreground">Projects</div>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                    <GraduationCap className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">B.Tech AI & DS</span>
                   </div>
-                  <div className="text-center p-4 rounded-xl bg-primary/5 border border-primary/10">
-                    <div className="text-2xl font-bold text-primary">2</div>
-                    <div className="text-xs text-muted-foreground">Internships</div>
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">💼 3+ Projects</span>
                   </div>
-                  <div className="text-center p-4 rounded-xl bg-primary/5 border border-primary/10">
-                    <div className="text-2xl font-bold text-primary">IBM</div>
-                    <div className="text-xs text-muted-foreground">Certified</div>
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                    <Award className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">🌱 2 Internships</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                    <Award className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">🏆 IBM Certified</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                    <Trophy className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium">🥇 Prize Winner</span>
                   </div>
                 </div>
                 
@@ -188,10 +232,10 @@ const Hero = () => {
               
               {/* Floating badges */}
               <div className="absolute -top-4 -left-4 glass-card px-4 py-2 rounded-full border border-primary/20 animate-float">
-                <span className="text-sm font-medium text-primary">🎓 B.Tech AI & DS</span>
+                <span className="text-sm font-medium text-primary">🎓 AI & Data Science</span>
               </div>
               <div className="absolute -bottom-4 -right-4 glass-card px-4 py-2 rounded-full border border-secondary/20 animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-sm font-medium text-secondary">🏆 Prize Winner</span>
+                <span className="text-sm font-medium text-secondary">🏆 Award Winner</span>
               </div>
             </div>
           </div>
