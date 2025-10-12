@@ -63,9 +63,9 @@ const Hero = () => {
           </ul>
           
           {/* Open To Work Button */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-primary/30">
-            <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
-            <span className="text-xs font-medium text-primary">Open To Work</span>
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-green-500/30 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-xs font-medium text-green-400">Open to Work</span>
           </div>
         </div>
       </nav>
@@ -98,9 +98,9 @@ const Hero = () => {
             {/* Left Column - Text Content */}
             <div className={`space-y-6 transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               {/* Available Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-primary/20">
-                <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
-                <span className="text-xs font-medium text-primary">Available for opportunities</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-green-500/30 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <span className="text-xs font-medium text-green-400">Open to Work</span>
               </div>
               
               {/* Main Title */}
@@ -221,22 +221,12 @@ const Hero = () => {
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="p-3 rounded-xl glass-card border border-primary/10 text-center">
                     <span className="text-sm font-medium flex items-center justify-center gap-1.5">
-                      📁 <span className="text-foreground/80">3+ Projects</span>
+                      📁 <span className="text-foreground/80">5+ Projects</span>
                     </span>
                   </div>
                   <div className="p-3 rounded-xl glass-card border border-primary/10 text-center">
                     <span className="text-sm font-medium flex items-center justify-center gap-1.5">
-                      💼 <span className="text-foreground/80">2 Internships</span>
-                    </span>
-                  </div>
-                  <div className="p-3 rounded-xl glass-card border border-primary/10 text-center">
-                    <span className="text-sm font-medium flex items-center justify-center gap-1.5">
-                      🏅 <span className="text-foreground/80">IBM Certified</span>
-                    </span>
-                  </div>
-                  <div className="p-3 rounded-xl glass-card border border-primary/10 text-center">
-                    <span className="text-sm font-medium flex items-center justify-center gap-1.5">
-                      🏆 <span className="text-foreground/80">Prize Winner</span>
+                      🌱 <span className="text-foreground/80">2 Internships</span>
                     </span>
                   </div>
                 </div>
@@ -252,13 +242,6 @@ const Hero = () => {
                     </span>
                   ))}
                 </div>
-              </div>
-              
-              {/* Floating Award Badge */}
-              <div className="absolute -bottom-3 right-8 z-10 glass-card px-3 py-1.5 rounded-full border border-purple-500/20 animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-xs font-medium text-purple-400 flex items-center gap-1.5">
-                  🏆 Award Winner
-                </span>
               </div>
             </div>
           </div>

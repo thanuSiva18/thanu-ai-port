@@ -15,6 +15,20 @@ const experiences = [
     tags: ["Python", "SQL", "Power BI", "Pandas"]
   },
   {
+    icon: "💻",
+    title: "DevOps Intern",
+    company: "Lamstacks Software Solutions",
+    period: "Jul 2024 – Aug 2024",
+    location: "Chennai, India",
+    description: [
+      "Collaborated on automating deployment pipelines using CI/CD tools.",
+      "Assisted in containerization and version control using Docker and Git.",
+      "Monitored server performance and optimized infrastructure efficiency.",
+      "Contributed to system documentation and process streamlining."
+    ],
+    tags: ["Docker", "Git", "CI/CD", "DevOps"]
+  },
+  {
     icon: "🚀",
     title: "Chief Marketing Officer",
     company: "Z2Learn (EdTech Startup)",

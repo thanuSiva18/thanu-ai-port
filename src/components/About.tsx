@@ -1,44 +1,67 @@
-import { Award } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const section = document.getElementById("about");
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const lines = [
+    "Fueled by curiosity and a love for solving problems, I dive into data to find what others miss.",
+    "From dashboards to machine learning models, I focus on delivering clarity, insights, and results.",
+    "My goal? To grow into a data professional who blends technical skill with business impact."
+  ];
+
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+    <section id="about" className="py-32 px-4 relative overflow-hidden">
+      {/* Subtle particle background */}
+      <div className="absolute inset-0 opacity-30">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-primary/20 rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
           About <span className="text-gradient">Me</span>
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="glass-card rounded-2xl p-8 space-y-6 animate-fade-in glow-border">
-            <p className="text-lg leading-relaxed text-foreground/90">
-              I'm an <span className="text-primary font-semibold">analytical and detail-oriented</span> B.Tech 
-              Artificial Intelligence & Data Science student passionate about uncovering insights from data.
+        <div className="text-center space-y-8 px-4">
+          {lines.map((line, index) => (
+            <p
+              key={index}
+              className={`text-xl md:text-2xl leading-relaxed text-foreground/80 transition-all duration-1000 ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 0.3}s` }}
+            >
+              {line}
             </p>
-            
-            <p className="text-lg leading-relaxed text-foreground/90">
-              Skilled in <span className="text-primary font-semibold">Python, SQL, Excel, and Power BI</span>, 
-              with hands-on experience in dashboards and ML projects.
-            </p>
-            
-            <div className="flex items-start gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
-              <Award className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-              <p className="text-foreground/90">
-                <span className="font-semibold text-primary">Certified:</span> IBM Data Analyst Professional Certificate (Coursera)
-              </p>
-            </div>
-          </div>
-          
-          <div className="relative">
-            <div className="glass-card rounded-2xl p-8 h-full flex items-center justify-center glow-border">
-              <div className="text-center space-y-4">
-                <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-6xl">👨‍💻</div>
-                </div>
-                <p className="text-xl font-semibold text-gradient">Data Storyteller</p>
-                <p className="text-muted-foreground">Turning complexity into clarity</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

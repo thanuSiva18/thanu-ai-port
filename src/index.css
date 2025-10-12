@@ -124,4 +124,20 @@ All colors MUST be HSL.
       transform: rotate(360deg);
     }
   }
+
+  /* Scroll-triggered fade-in */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scroll-fade-in {
+    animation: fade-up 0.8s ease-out forwards;
+  }
 }
