@@ -1,14 +1,14 @@
 import { GraduationCap, Award, Trophy } from "lucide-react";
 
 const certifications = [
-  "IBM Data Analyst Professional Certificate (Coursera)",
-  "1st Prize – Intercollegiate Competition, Mar Ephrem College (2024)",
-  "1st Prize – Business Quiz, Amrita College MBA Dept. (2024)"
+  "IBM Data Analyst Professional Certificate (Course)",
+  "1st Prize – Intercollegiate Competition, Mar'25",
+  "1st Prize – Business Quiz, Amite College MBA Department (2024)",
 ];
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 px-4 bg-muted/20">
+    <section id="education" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Education & <span className="text-gradient">Achievements</span>
@@ -16,7 +16,7 @@ const Education = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {/* Education */}
-          <div className="glass-card rounded-2xl p-8 glow-border animate-fade-in">
+          <div className="glass-card p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-all">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
                 <GraduationCap className="w-8 h-8 text-primary" />
@@ -28,17 +28,17 @@ const Education = () => {
               <h4 className="text-xl font-bold text-primary">
                 B.Tech – Artificial Intelligence & Data Science
               </h4>
-              <p className="text-foreground/80 text-lg">
+              <p className="text-lg text-foreground/80">
                 St. Xavier's Catholic College of Engineering
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-foreground/60">
                 Nagercoil
               </p>
             </div>
           </div>
           
-          {/* Certifications & Achievements */}
-          <div className="glass-card rounded-2xl p-8 glow-border animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          {/* Achievements */}
+          <div className="glass-card p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-all">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
                 <Trophy className="w-8 h-8 text-secondary" />

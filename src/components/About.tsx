@@ -13,21 +13,21 @@ const About = () => {
       { threshold: 0.2 }
     );
 
-    const section = document.getElementById("about");
+    const section = document.getElementById('about');
     if (section) observer.observe(section);
 
     return () => observer.disconnect();
   }, []);
 
   const lines = [
-    "Fueled by curiosity and a love for solving problems, I dive into data to find what others miss.",
-    "From dashboards to machine learning models, I focus on delivering clarity, insights, and results.",
-    "My goal? To grow into a data professional who blends technical skill with business impact."
+    "Fueled by curiosity and a love for solving problems, I dive into data to uncover patterns and meaning.",
+    "From dashboards to machine learning models, I turn data into stories and strategies.",
+    "My goal: to grow into a data professional who blends technical skill with business impact."
   ];
 
   return (
     <section id="about" className="py-32 px-4 relative overflow-hidden">
-      {/* Subtle particle background */}
+      {/* Particle Background */}
       <div className="absolute inset-0 opacity-30">
         {Array.from({ length: 20 }).map((_, i) => (
           <div
@@ -44,7 +44,7 @@ const About = () => {
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           About <span className="text-gradient">Me</span>
         </h2>
         
