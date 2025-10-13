@@ -193,50 +193,40 @@ const Hero = () => {
             
             {/* Right Column - Visual Card */}
             <div className={`relative transition-all duration-1000 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              {/* Floating Badge */}
-              <div className="absolute -top-3 left-8 z-10 glass-card px-3 py-1.5 rounded-full border border-primary/20 animate-float">
-                <span className="text-xs font-medium text-primary flex items-center gap-1.5">
-                  🎓 AI & Data Science
-                </span>
-              </div>
-              
               {/* Main Card */}
-              <div className="relative glass-card rounded-3xl p-8 border border-primary/10">
-                {/* Avatar Circle */}
-                <div className="relative w-56 h-56 mx-auto mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-purple-500/30 rounded-full blur-2xl animate-pulse" />
-                  <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center border-2 border-primary/20">
-                    <span className="text-8xl">👨‍💻</span>
+              <div className="relative glass-card rounded-3xl p-8 border border-primary/10 hover:border-primary/20 transition-all duration-500">
+                {/* Glowing Profile Orb - No emoji, just gradient */}
+                <div className="relative w-48 h-48 mx-auto mb-8">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-purple-500/40 to-primary/40 rounded-full blur-3xl animate-pulse" />
+                  <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/30 via-purple-500/30 to-primary/30 flex items-center justify-center border-2 border-primary/30 backdrop-blur-sm">
+                    <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/50 to-purple-500/50 blur-xl animate-float" />
                   </div>
                 </div>
                 
-                {/* Info Badge */}
-                <div className="mb-6 p-3 rounded-xl glass-card border border-primary/10">
-                  <span className="text-sm font-medium flex items-center gap-2">
-                    🎓 <span className="text-foreground/80">B.Tech AI & DS</span>
-                  </span>
-                </div>
-                
-                {/* Achievement Grid */}
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="p-3 rounded-xl glass-card border border-primary/10 text-center">
-                    <span className="text-sm font-medium flex items-center justify-center gap-1.5">
-                      📁 <span className="text-foreground/80">5+ Projects</span>
+                {/* Glass Info Cards */}
+                <div className="space-y-3 mb-6">
+                  <div className="p-3 rounded-xl glass-card border border-primary/10 hover:border-primary/20 transition-colors">
+                    <span className="text-sm font-medium flex items-center gap-2">
+                      🎓 <span className="text-foreground/80">B.Tech AI & DS</span>
                     </span>
                   </div>
-                  <div className="p-3 rounded-xl glass-card border border-primary/10 text-center">
-                    <span className="text-sm font-medium flex items-center justify-center gap-1.5">
-                      🌱 <span className="text-foreground/80">2 Internships</span>
-                    </span>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="p-3 rounded-xl glass-card border border-primary/10 hover:border-primary/20 transition-colors text-center">
+                      <span className="text-sm font-medium text-foreground/80">💼 5+ Projects</span>
+                    </div>
+                    <div className="p-3 rounded-xl glass-card border border-primary/10 hover:border-primary/20 transition-colors text-center">
+                      <span className="text-sm font-medium text-foreground/80">🌱 2 Internships</span>
+                    </div>
                   </div>
                 </div>
                 
-                {/* Tech Stack Tags */}
+                {/* Tech Stack Pills */}
                 <div className="flex flex-wrap gap-2 justify-center">
                   {['Python', 'SQL', 'Power BI', 'Pandas', 'Streamlit'].map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
+                      className="px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 hover:scale-105 transition-all duration-300"
                     >
                       {tech}
                     </span>
