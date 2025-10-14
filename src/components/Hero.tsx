@@ -51,9 +51,9 @@ const Hero = () => {
               </button>
             </li>
             <li>
-              <button onClick={() => window.open('#', '_blank')} className="text-foreground/70 hover:text-primary transition-colors">
+              <a href="/resume" className="text-foreground/70 hover:text-primary transition-colors">
                 Resume
-              </button>
+              </a>
             </li>
             <li>
               <button onClick={() => scrollToSection('contact')} className="text-foreground/70 hover:text-primary transition-colors">
@@ -155,13 +155,13 @@ const Hero = () => {
                   <Linkedin className="w-4 h-4 mr-2" />
                   Connect on LinkedIn
                 </Button>
-                <button
+                <a
+                  href="/resume"
                   className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors underline-offset-4 hover:underline flex items-center gap-2"
-                  onClick={() => window.open('#', '_blank')}
                 >
                   <FileText className="w-4 h-4" />
                   View Resume
-                </button>
+                </a>
               </div>
 
               {/* Social Links */}
