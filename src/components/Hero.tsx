@@ -146,15 +146,6 @@ const Hero = () => {
                   <Sparkles className="w-4 h-4 mr-2" />
                   View Projects
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="glass-card border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-300"
-                  onClick={() => window.open('https://linkedin.com/in/thanusiva18', '_blank')}
-                >
-                  <Linkedin className="w-4 h-4 mr-2" />
-                  Connect on LinkedIn
-                </Button>
                 <a
                   href="/resume"
                   className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors underline-offset-4 hover:underline flex items-center gap-2"

@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Dark futuristic theme - Navy/Black with neon blue accents */
-    --background: 220 25% 5%;
+    --background: 220 30% 4%; /* Deeper dark background */
     --foreground: 220 10% 95%;
 
     --card: 220 20% 10%;
@@ -19,36 +19,36 @@ All colors MUST be HSL.
     --popover: 220 20% 10%;
     --popover-foreground: 220 10% 95%;
 
-    --primary: 195 100% 60%;
+    --primary: 195 100% 65%; /* Brighter base neon blue */
     --primary-foreground: 220 25% 5%;
-    --primary-glow: 195 100% 70%;
+    --primary-glow: 195 100% 75%; /* Stronger glow */
 
-    --secondary: 260 60% 50%;
+    --secondary: 270 70% 60%; /* More electric purple/magenta */
     --secondary-foreground: 220 10% 95%;
 
     --muted: 220 15% 20%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 195 100% 60%;
+    --accent: 195 100% 65%;
     --accent-foreground: 220 25% 5%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 220 10% 95%;
 
-    --border: 220 20% 20%;
+    --border: 220 15% 25%; /* Slightly lighter border for better glass effect */
     --border-glow: 195 100% 60% / 0.3;
-    --input: 220 20% 15%;
-    --ring: 195 100% 60%;
+    --input: 220 20% 12%; /* Darker input field */
+    --ring: 195 100% 65%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 25% 5%) 0%, hsl(220 30% 8%) 50%, hsl(220 25% 5%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 4%) 0%, hsl(220 30% 8%) 50%, hsl(220 30% 4%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(220 20% 12% / 0.5) 0%, hsl(220 20% 8% / 0.3) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(195 100% 60%) 0%, hsl(260 60% 50%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(195 100% 65%) 0%, hsl(270 70% 60%) 100%);
     
     /* Shadows */
-    --shadow-glow: 0 0 30px hsl(195 100% 60% / 0.2);
+    --shadow-glow: 0 0 30px hsl(195 100% 65% / 0.2);
     --shadow-card: 0 8px 32px hsl(220 25% 2% / 0.5);
     
     /* Animations */
@@ -75,16 +75,16 @@ All colors MUST be HSL.
   .glass-card {
     background: linear-gradient(135deg, hsl(220 20% 12% / 0.5) 0%, hsl(220 20% 8% / 0.3) 100%);
     backdrop-filter: blur(12px);
-    border: 1px solid hsl(220 20% 20% / 0.3);
+    border: 1px solid hsl(220 15% 25% / 0.3);
   }
 
   .glow-border {
-    border: 1px solid hsl(195 100% 60% / 0.3);
-    box-shadow: 0 0 20px hsl(195 100% 60% / 0.15);
+    border: 1px solid hsl(195 100% 65% / 0.3);
+    box-shadow: 0 0 20px hsl(195 100% 65% / 0.15);
   }
 
   .text-gradient {
-    background: linear-gradient(90deg, hsl(195 100% 60%) 0%, hsl(260 60% 50%) 100%);
+    background: linear-gradient(90deg, hsl(195 100% 65%) 0%, hsl(270 70% 60%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -96,10 +96,10 @@ All colors MUST be HSL.
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 20px hsl(195 100% 60% / 0.2);
+      box-shadow: 0 0 20px hsl(195 100% 65% / 0.2);
     }
     to {
-      box-shadow: 0 0 30px hsl(195 100% 60% / 0.4);
+      box-shadow: 0 0 30px hsl(195 100% 65% / 0.4);
     }
   }
 

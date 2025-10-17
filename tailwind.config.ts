@@ -71,8 +71,8 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(195 100% 60% / 0.2)" },
-          "50%": { boxShadow: "0 0 30px hsl(195 100% 60% / 0.4)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(195 100% 65% / 0.2)" },
+          "50%": { boxShadow: "0 0 30px hsl(195 100% 65% / 0.4)" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },

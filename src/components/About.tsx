@@ -61,7 +61,7 @@ const About = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: prefersReducedMotion ? 0.2 : 0.7, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: prefersReducedMotion ? 0.2 : 0.7 }
     }
   };
 
@@ -71,7 +71,7 @@ const About = () => {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: prefersReducedMotion ? 0.2 : 0.6, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: prefersReducedMotion ? 0.2 : 0.6 }
     }
   };
 
